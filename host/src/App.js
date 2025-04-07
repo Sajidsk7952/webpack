@@ -1,6 +1,6 @@
 import React, { Suspense } from "react";
-const RemoteApp = React.lazy(() => import("remoteA/remoteApp"));
-
+const RemoteApp = React.lazy(() => import("remoteA/remoteAapp"));
+const RemoteBapp = React.lazy(()=> import("remoteB/remoteBapp"));
 function App() {
   return (
     <>
@@ -13,6 +13,7 @@ function App() {
         }
       >
         <RemoteApp success={true}/>
+        <RemoteBapp failure={false} />
       </Suspense>
     </>
   );
